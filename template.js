@@ -5,6 +5,7 @@ const fullName = firstName + ' ' + lastName;
 const fullName2 = firstName + ' ' + lastName + ' is a good boy.';
 
 const fullName3 = `${firstName} ${lastName} is a good boy.`; //same output using template
+const math = `${45+25-69} and ${45+25-71} are not same`
 
 const poem = `
 you fit into me
