@@ -10,5 +10,6 @@ setTimeout(function (){
 setTimeout(() => {
     console.log("I am setTimeout with 5 sec delay");
 },5000)
+setTimeout(asynchronous, 3000)
 console.log("Third Line");
 console.log("Fourth Line");
