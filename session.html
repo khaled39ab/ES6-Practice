@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local session storage</title>
+</head>
+<body>
+    <h1>Shopping</h1>
+    <input type="text" id="input-field"> 
+    <button>Add to cart</button>
+    <br>
+    <br>
+    <button>Place order</button>
+
+    <script>
+        const addItems = () =>{
+            const inputField = document.getElementById("input-field");
+            const product = inputField.value;
+
+            inputField.value ="";
+        }
+    </script>
+</body>
+</html>
