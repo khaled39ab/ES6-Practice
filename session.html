@@ -29,7 +29,7 @@
             displayProduct(product);
 
             //add to local storage
-            addProductToCart(product)
+            addProductToCart(product);
 
             inputField.value ="";
         }
@@ -55,10 +55,14 @@
 
         const addProductToCart = name =>{
             const cart = getCart();
-            cart[name] = 1;
-            // console.log(cart);
+            if(cart[name]){
+                cart[name] = cart[name] + 1;
+            }
+            else{
+                cart[name] = 1;
+            }
             const cartStringified = JSON.stringify(cart);
-            localStorage.setItem('cart', cartStringified)
+            localStorage.setItem("cart", cartStringified)
         }
 
         const displayFromLocalStorage = () =>{
