@@ -15,12 +15,15 @@
 
     </ul>
     <br>
-    <button>Place order</button>
+    <button onclick="placeOrder()">Place order</button>
 
     <script>
         const addItems = () =>{
             const inputField = document.getElementById("input-field");
             const product = inputField.value;
+            if (!product){
+                return;
+            }
 
             //display products
             displayProduct(product);
@@ -57,6 +60,15 @@
             const cartStringified = JSON.stringify(cart);
             localStorage.setItem('cart', cartStringified)
         }
+
+        const displayFromLocalStorage = () =>{
+            const cart = getCart();
+            for (const name in cart){
+                displayProduct(name);
+            }
+        }
+        displayFromLocalStorage();
+        
     </script>
 </body>
 </html>
